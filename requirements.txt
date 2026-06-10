@@ -1,0 +1,17 @@
+# ── Core (stdlib only — no external ML deps needed) ────────────────────────
+# The pipeline uses only the Python standard library for evaluation metrics.
+
+# ── Testing ────────────────────────────────────────────────────────────────
+pytest>=7.4
+pytest-cov>=4.1
+pytest-json-report>=1.5
+
+# ── Dev tooling ────────────────────────────────────────────────────────────
+black>=23.0
+isort>=5.12
+flake8>=6.0
+
+# ── Optional: real API adapters ────────────────────────────────────────────
+# Uncomment the adapter(s) you want to use:
+# openai>=1.0.0
+# anthropic>=0.20.0

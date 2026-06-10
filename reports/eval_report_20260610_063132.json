@@ -1,0 +1,249 @@
+{
+  "meta": {
+    "run_id": "20260610_063132",
+    "model": "mock",
+    "run_at": "2026-06-10T06:31:32.370838+00:00",
+    "dataset_size": 10,
+    "thresholds": {
+      "min_relevancy": 0.35,
+      "min_faithfulness": 0.35,
+      "max_hallucination_rate": 0.45,
+      "min_semantic_similarity": 0.25,
+      "min_completeness": 0.2,
+      "max_latency_p95_ms": 15000,
+      "min_pass_rate": 0.65
+    }
+  },
+  "aggregate": {
+    "total_questions": 10,
+    "passed": 1,
+    "failed": 9,
+    "pass_rate": 0.1,
+    "avg_relevancy": 0.2402,
+    "avg_faithfulness": 0.7,
+    "avg_hallucination_rate": 0.8573,
+    "avg_semantic_similarity": 0.1413,
+    "avg_completeness": 0.1533,
+    "latency_p50_ms": 1.11,
+    "latency_p95_ms": 1.15,
+    "cost_per_query_usd": 0.0009,
+    "blocked": true,
+    "block_reasons": [
+      "Hallucination rate 85.7% > threshold 45.0%",
+      "Pass rate 10.0% < minimum 65.0%"
+    ]
+  },
+  "results": [
+    {
+      "question_id": "q053",
+      "question": "What is the Coriolis effect?",
+      "expected_answer": "The Coriolis effect is the deflection of moving objects when viewed from a rotating frame of reference. On Earth, it causes winds and ocean currents to deflect to the right in the Northern Hemisphere and left in the Southern Hemisphere.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.11,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q088",
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "expected_answer": "Supervised learning trains models on labeled data where outputs are known. Unsupervised learning finds patterns in unlabeled data without predefined answers, often used for clustering and dimensionality reduction.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.11,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q009",
+      "question": "What year did World War II end?",
+      "expected_answer": "World War II ended in 1945.",
+      "generated_answer": "World War II ended in 1945 with the surrender of Germany and Japan.",
+      "context": "",
+      "latency_ms": 1.09,
+      "scores": {
+        "relevancy": 0.4283,
+        "faithfulness": 0.7,
+        "hallucination": 0.225,
+        "semantic_similarity": 0.625,
+        "completeness": 1.0
+      },
+      "passed": true,
+      "failure_reasons": []
+    },
+    {
+      "question_id": "q082",
+      "question": "What is the purpose of continuous integration in software development?",
+      "expected_answer": "Continuous Integration (CI) is the practice of automatically merging code changes from multiple developers into a shared repository frequently. Automated tests run on each merge to detect integration errors early.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.15,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q041",
+      "question": "What is the Magna Carta?",
+      "expected_answer": "The Magna Carta is a royal charter of rights signed by King John of England in 1215. It is considered a foundational document for constitutional governance and individual rights, limiting the power of the monarch.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.11,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q030",
+      "question": "What is compound interest?",
+      "expected_answer": "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, it grows exponentially over time.",
+      "generated_answer": "This is actually completely different from what most people believe.",
+      "context": "",
+      "latency_ms": 1.1,
+      "scores": {
+        "relevancy": 0.3833,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q031",
+      "question": "What is the difference between a list and a tuple in Python?",
+      "expected_answer": "In Python, a list is mutable (can be changed after creation) and uses square brackets [], while a tuple is immutable (cannot be changed after creation) and uses parentheses (). Tuples are generally faster and used for fixed collections.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.13,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q062",
+      "question": "What is cybersecurity?",
+      "expected_answer": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks, theft, and damage. It includes technologies and processes designed to safeguard against hackers and data breaches.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.15,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q038",
+      "question": "What is an API?",
+      "expected_answer": "An API (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It defines how requests and responses should be formatted.",
+      "generated_answer": "An API (Application Programming Interface) is a set of rules that allows software applications to communicate with each other.",
+      "context": "",
+      "latency_ms": 1.1,
+      "scores": {
+        "relevancy": 0.285,
+        "faithfulness": 0.7,
+        "hallucination": 0.3478,
+        "semantic_similarity": 0.7882,
+        "completeness": 0.5333
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.28 < 0.35"
+      ]
+    },
+    {
+      "question_id": "q045",
+      "question": "What is the stock market?",
+      "expected_answer": "The stock market is a marketplace where buyers and sellers trade shares of publicly listed companies. It allows companies to raise capital by selling ownership stakes and provides investors opportunities to profit from company growth.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.1,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    }
+  ]
+}

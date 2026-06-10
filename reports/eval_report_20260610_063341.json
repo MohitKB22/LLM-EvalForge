@@ -1,0 +1,2237 @@
+{
+  "meta": {
+    "run_id": "20260610_063341",
+    "model": "mock",
+    "run_at": "2026-06-10T06:33:41.182297+00:00",
+    "dataset_size": 102,
+    "thresholds": {
+      "min_relevancy": 0.35,
+      "min_faithfulness": 0.35,
+      "max_hallucination_rate": 0.45,
+      "min_semantic_similarity": 0.25,
+      "min_completeness": 0.2,
+      "max_latency_p95_ms": 15000,
+      "min_pass_rate": 0.65
+    }
+  },
+  "aggregate": {
+    "total_questions": 102,
+    "passed": 1,
+    "failed": 101,
+    "pass_rate": 0.0098,
+    "avg_relevancy": 0.2568,
+    "avg_faithfulness": 0.7,
+    "avg_hallucination_rate": 0.9324,
+    "avg_semantic_similarity": 0.0913,
+    "avg_completeness": 0.0586,
+    "latency_p50_ms": 1.27,
+    "latency_p95_ms": 1.29,
+    "cost_per_query_usd": 0.0009,
+    "blocked": true,
+    "block_reasons": [
+      "Hallucination rate 93.2% > threshold 45.0%",
+      "Pass rate 1.0% < minimum 65.0%"
+    ]
+  },
+  "results": [
+    {
+      "question_id": "q001",
+      "question": "What is the capital of France?",
+      "expected_answer": "Paris",
+      "generated_answer": "Paris is the capital of France.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.5567,
+        "faithfulness": 0.7,
+        "hallucination": 0.8,
+        "semantic_similarity": 0.3333,
+        "completeness": 1.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.80 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q002",
+      "question": "Explain what a REST API is in simple terms.",
+      "expected_answer": "A REST API is a way for software applications to communicate with each other over the internet using standard HTTP methods like GET, POST, PUT, and DELETE. It follows a set of rules that make it easy for different systems to talk to each other.",
+      "generated_answer": "This is actually completely different from what most people believe.",
+      "context": "",
+      "latency_ms": 1.31,
+      "scores": {
+        "relevancy": 0.29,
+        "faithfulness": 0.7,
+        "hallucination": 0.9484,
+        "semantic_similarity": 0.086,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.29 < 0.35",
+        "hallucination 0.95 > 0.45",
+        "similarity 0.09 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q003",
+      "question": "What is photosynthesis?",
+      "expected_answer": "Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to produce oxygen and energy in the form of glucose.",
+      "generated_answer": "Photosynthesis is the process by which plants use sunlight, water, and CO\u2082 to produce glucose and oxygen, converting light energy into chemical energy stored in glucose.",
+      "context": "",
+      "latency_ms": 1.21,
+      "scores": {
+        "relevancy": 0.65,
+        "faithfulness": 0.7,
+        "hallucination": 0.4686,
+        "semantic_similarity": 0.6,
+        "completeness": 0.5
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.47 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q004",
+      "question": "What is the Pythagorean theorem?",
+      "expected_answer": "The Pythagorean theorem states that in a right triangle, the square of the length of the hypotenuse equals the sum of the squares of the other two sides: a\u00b2 + b\u00b2 = c\u00b2.",
+      "generated_answer": "This is actually completely different from what most people believe.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.3833,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q005",
+      "question": "What are the main causes of climate change?",
+      "expected_answer": "The main causes of climate change are human activities that release greenhouse gases, particularly burning fossil fuels (coal, oil, gas), deforestation, industrial processes, and agriculture, which trap heat in the atmosphere.",
+      "generated_answer": "Climate change is primarily caused by human activities releasing greenhouse gases, especially burning fossil fuels.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.505,
+        "faithfulness": 0.7,
+        "hallucination": 0.7001,
+        "semantic_similarity": 0.4769,
+        "completeness": 0.1667
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.70 > 0.45",
+        "completeness 0.17 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q006",
+      "question": "How does machine learning differ from traditional programming?",
+      "expected_answer": "In traditional programming, developers write explicit rules for the computer to follow. In machine learning, the computer learns patterns from data to make decisions, without being explicitly programmed with specific rules.",
+      "generated_answer": "Machine learning is a subset of AI where computers learn patterns from data without being explicitly programmed.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.555,
+        "faithfulness": 0.7,
+        "hallucination": 0.6786,
+        "semantic_similarity": 0.4667,
+        "completeness": 0.2
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.68 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q007",
+      "question": "What is the speed of light?",
+      "expected_answer": "The speed of light in a vacuum is approximately 299,792,458 meters per second, or about 186,282 miles per second.",
+      "generated_answer": "This is actually completely different from what most people believe.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.3833,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q008",
+      "question": "What is a blockchain?",
+      "expected_answer": "A blockchain is a distributed digital ledger that records transactions across many computers. Each block contains a group of transactions, and these blocks are chained together in chronological order, making the data tamper-resistant.",
+      "generated_answer": "A blockchain is not a distributed ledger where transactions are recorded in linked blocks that are tamper-resistant.",
+      "context": "",
+      "latency_ms": 1.29,
+      "scores": {
+        "relevancy": 0.62,
+        "faithfulness": 0.7,
+        "hallucination": 0.7458,
+        "semantic_similarity": 0.4861,
+        "completeness": 0.1212
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.75 > 0.45",
+        "completeness 0.12 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q009",
+      "question": "What year did World War II end?",
+      "expected_answer": "World War II ended in 1945.",
+      "generated_answer": "World War II ended in 1945 with the surrender of Germany and Japan.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.4283,
+        "faithfulness": 0.7,
+        "hallucination": 0.225,
+        "semantic_similarity": 0.625,
+        "completeness": 1.0
+      },
+      "passed": true,
+      "failure_reasons": []
+    },
+    {
+      "question_id": "q010",
+      "question": "What is DNA and why is it important?",
+      "expected_answer": "DNA (Deoxyribonucleic Acid) is a molecule that carries the genetic instructions for the development, functioning, growth, and reproduction of all known living organisms. It is important because it contains the blueprint of life.",
+      "generated_answer": "DNA (Deoxyribonucleic Acid) is a molecule containing the genetic instructions for development and functioning of all known living organisms.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.285,
+        "faithfulness": 0.7,
+        "hallucination": 0.4659,
+        "semantic_similarity": 0.6967,
+        "completeness": 0.375
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.28 < 0.35",
+        "hallucination 0.47 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q011",
+      "question": "What is the difference between HTTP and HTTPS?",
+      "expected_answer": "HTTP (HyperText Transfer Protocol) is a protocol for transferring data over the internet, while HTTPS (HTTP Secure) is the same protocol but with encryption using SSL/TLS, making it secure against eavesdropping.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q012",
+      "question": "What is inflation in economics?",
+      "expected_answer": "Inflation is the rate at which the general level of prices for goods and services rises over time, resulting in a decrease in purchasing power of currency.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q013",
+      "question": "Who wrote Romeo and Juliet?",
+      "expected_answer": "Romeo and Juliet was written by William Shakespeare.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q014",
+      "question": "What is the difference between RAM and ROM?",
+      "expected_answer": "RAM (Random Access Memory) is temporary, fast memory used by the computer while running programs, and its data is lost when power is off. ROM (Read-Only Memory) is permanent memory that stores firmware and is not erased when power is off.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q015",
+      "question": "What is the mitochondria?",
+      "expected_answer": "The mitochondria is an organelle found in cells, often called the powerhouse of the cell because it generates most of the cell's supply of ATP (adenosine triphosphate), the energy currency of the cell.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q016",
+      "question": "Explain the concept of recursion in programming.",
+      "expected_answer": "Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem. It consists of a base case (stopping condition) and recursive case (the function calling itself with a smaller input).",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.43,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q017",
+      "question": "What is the largest planet in our solar system?",
+      "expected_answer": "Jupiter is the largest planet in our solar system.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q018",
+      "question": "What is supply and demand?",
+      "expected_answer": "Supply and demand is an economic model describing how the price and quantity of a good are determined in a market. When demand exceeds supply, prices rise; when supply exceeds demand, prices fall.",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q019",
+      "question": "What is the French Revolution?",
+      "expected_answer": "The French Revolution was a period of radical political and societal change in France from 1789 to 1799 that overthrew the monarchy, established a republic, and ended with Napoleon Bonaparte's rise to power.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q020",
+      "question": "What is object-oriented programming?",
+      "expected_answer": "Object-oriented programming (OOP) is a programming paradigm that organizes code around objects, which combine data (attributes) and behavior (methods). Key concepts include encapsulation, inheritance, and polymorphism.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q021",
+      "question": "What is the water cycle?",
+      "expected_answer": "The water cycle is the continuous movement of water through Earth's systems: evaporation from oceans and lakes, condensation into clouds, precipitation as rain or snow, and collection back into bodies of water.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q022",
+      "question": "What is a firewall in computing?",
+      "expected_answer": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between a trusted internal network and untrusted external networks.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q023",
+      "question": "Who invented the telephone?",
+      "expected_answer": "The telephone was invented by Alexander Graham Bell in 1876.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q024",
+      "question": "What is the difference between a virus and a bacterium?",
+      "expected_answer": "Bacteria are single-celled living organisms that can reproduce on their own, while viruses are non-living entities that require a host cell to replicate. Bacteria can be treated with antibiotics; viruses cannot.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q025",
+      "question": "What is SQL?",
+      "expected_answer": "SQL (Structured Query Language) is a programming language designed for managing and manipulating relational databases. It is used to query, insert, update, and delete data in databases.",
+      "generated_answer": "SQL (Structured Query Language) is used to manage and query relational databases.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.18,
+        "faithfulness": 0.7,
+        "hallucination": 0.5685,
+        "semantic_similarity": 0.6125,
+        "completeness": 0.2692
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.18 < 0.35",
+        "hallucination 0.57 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q026",
+      "question": "What is a black hole?",
+      "expected_answer": "A black hole is a region in space where gravity is so strong that nothing, not even light, can escape from it. It forms when a massive star collapses under its own gravity.",
+      "generated_answer": "A black hole is a region of spacetime where gravity is so strong that nothing can escape it, not even light.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.7667,
+        "faithfulness": 0.7,
+        "hallucination": 0.5144,
+        "semantic_similarity": 0.6776,
+        "completeness": 0.4375
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.51 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q027",
+      "question": "What is the difference between democracy and autocracy?",
+      "expected_answer": "In a democracy, power is held by the people through elected representatives, with freedoms protected by law. In an autocracy, power is concentrated in one person or group without effective constitutional limitations.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q028",
+      "question": "What is a CPU?",
+      "expected_answer": "A CPU (Central Processing Unit) is the primary component of a computer that executes instructions from programs. It performs basic arithmetic, logic, control, and input/output operations.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q029",
+      "question": "What is the theory of evolution?",
+      "expected_answer": "The theory of evolution, proposed by Charles Darwin, explains how species change over time through natural selection. Organisms with traits better suited to their environment survive and reproduce more, passing those traits to offspring.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q030",
+      "question": "What is compound interest?",
+      "expected_answer": "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest, it grows exponentially over time.",
+      "generated_answer": "Compound interest grows exponentially by calculating interest on both the principal and accumulated interest.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.6767,
+        "faithfulness": 0.7,
+        "hallucination": 0.6151,
+        "semantic_similarity": 0.6125,
+        "completeness": 0.25
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.62 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q031",
+      "question": "What is the difference between a list and a tuple in Python?",
+      "expected_answer": "In Python, a list is mutable (can be changed after creation) and uses square brackets [], while a tuple is immutable (cannot be changed after creation) and uses parentheses (). Tuples are generally faster and used for fixed collections.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q032",
+      "question": "What is the United Nations?",
+      "expected_answer": "The United Nations (UN) is an international organization founded in 1945 to maintain international peace, foster friendly relations among nations, and promote social progress and human rights.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q033",
+      "question": "What is Newton's first law of motion?",
+      "expected_answer": "Newton's first law of motion states that an object at rest stays at rest, and an object in motion stays in motion with the same speed and direction, unless acted upon by an unbalanced force. This is also called the law of inertia.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q034",
+      "question": "What is artificial intelligence?",
+      "expected_answer": "Artificial Intelligence (AI) is the simulation of human intelligence processes by computer systems, including learning, reasoning, problem-solving, perception, and language understanding.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q035",
+      "question": "What is the greenhouse effect?",
+      "expected_answer": "The greenhouse effect is a natural process where gases in Earth's atmosphere trap heat from the sun, warming the planet. Human activities have enhanced this effect by releasing extra greenhouse gases, contributing to global warming.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q036",
+      "question": "What is a neural network?",
+      "expected_answer": "A neural network is a computing system inspired by the human brain, composed of layers of interconnected nodes (neurons). It learns to perform tasks by analyzing examples, making it fundamental to deep learning and AI.",
+      "generated_answer": "A neural network is a computing model inspired by the brain, consisting of interconnected nodes that learn from data.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.7517,
+        "faithfulness": 0.7,
+        "hallucination": 0.6776,
+        "semantic_similarity": 0.4161,
+        "completeness": 0.2647
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.68 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q037",
+      "question": "What is the Big Bang theory?",
+      "expected_answer": "The Big Bang theory is the prevailing cosmological model explaining the origin of the universe. It proposes that the universe began as an extremely hot and dense singularity approximately 13.8 billion years ago and has been expanding ever since.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q038",
+      "question": "What is an API?",
+      "expected_answer": "An API (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It defines how requests and responses should be formatted.",
+      "generated_answer": "An API (Application Programming Interface) is a set of rules that allows software applications to communicate with each other.",
+      "context": "",
+      "latency_ms": 1.13,
+      "scores": {
+        "relevancy": 0.285,
+        "faithfulness": 0.7,
+        "hallucination": 0.3478,
+        "semantic_similarity": 0.7882,
+        "completeness": 0.5333
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.28 < 0.35"
+      ]
+    },
+    {
+      "question_id": "q039",
+      "question": "What is the Renaissance?",
+      "expected_answer": "The Renaissance was a cultural and intellectual movement in Europe from the 14th to 17th centuries that marked the transition from the Middle Ages to modernity, characterized by renewed interest in classical art, science, and humanism.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q040",
+      "question": "What is cloud computing?",
+      "expected_answer": "Cloud computing is the delivery of computing services over the internet, including storage, servers, databases, networking, software, and analytics. It allows users to access and store data on remote servers instead of local hardware.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q041",
+      "question": "What is the Magna Carta?",
+      "expected_answer": "The Magna Carta is a royal charter of rights signed by King John of England in 1215. It is considered a foundational document for constitutional governance and individual rights, limiting the power of the monarch.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q042",
+      "question": "What is a binary number system?",
+      "expected_answer": "The binary number system is a base-2 numeral system that uses only two digits, 0 and 1. It is the fundamental language of computers, as electronic circuits can easily represent two states: on (1) and off (0).",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q043",
+      "question": "What is the immune system?",
+      "expected_answer": "The immune system is a complex network of cells, tissues, and organs that defends the body against pathogens like bacteria, viruses, and parasites. It includes white blood cells, antibodies, and the lymphatic system.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q044",
+      "question": "What is DevOps?",
+      "expected_answer": "DevOps is a set of practices that combines software development and IT operations to shorten the development lifecycle and deliver high-quality software continuously. It emphasizes collaboration, automation, and continuous integration.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q045",
+      "question": "What is the stock market?",
+      "expected_answer": "The stock market is a marketplace where buyers and sellers trade shares of publicly listed companies. It allows companies to raise capital by selling ownership stakes and provides investors opportunities to profit from company growth.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q046",
+      "question": "What is gravity?",
+      "expected_answer": "Gravity is a fundamental force of nature that attracts objects with mass toward each other. On Earth, it pulls objects downward toward the planet's center. Einstein described it as the curvature of spacetime caused by mass.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q047",
+      "question": "What is the difference between frontend and backend development?",
+      "expected_answer": "Frontend development involves building what users see and interact with in a browser, using HTML, CSS, and JavaScript. Backend development involves server-side logic, databases, and APIs that power the frontend.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 0.9561,
+        "semantic_similarity": 0.0731,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 0.96 > 0.45",
+        "similarity 0.07 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q048",
+      "question": "What is the periodic table?",
+      "expected_answer": "The periodic table is a tabular arrangement of chemical elements organized by atomic number, electron configuration, and chemical properties. It was created by Dmitri Mendeleev in 1869 and arranges elements into groups and periods.",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q049",
+      "question": "What is containerization in software?",
+      "expected_answer": "Containerization is a method of packaging an application and its dependencies into a container, ensuring it runs consistently across different computing environments. Docker is the most popular containerization platform.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q050",
+      "question": "What is GDP?",
+      "expected_answer": "GDP (Gross Domestic Product) is the total monetary or market value of all goods and services produced within a country's borders in a specific time period. It is the most common measure of a country's economic size.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q051",
+      "question": "What is the difference between TCP and UDP?",
+      "expected_answer": "TCP (Transmission Control Protocol) ensures reliable, ordered data delivery with error-checking. UDP (User Datagram Protocol) is faster but does not guarantee delivery or order, making it suitable for streaming.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q052",
+      "question": "What is a relational database?",
+      "expected_answer": "A relational database stores data in structured tables with rows and columns, where tables can be related to each other through keys. SQL is typically used to query and manage relational databases.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q053",
+      "question": "What is the Coriolis effect?",
+      "expected_answer": "The Coriolis effect is the deflection of moving objects when viewed from a rotating frame of reference. On Earth, it causes winds and ocean currents to deflect to the right in the Northern Hemisphere and left in the Southern Hemisphere.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q054",
+      "question": "What is agile methodology?",
+      "expected_answer": "Agile is an iterative software development methodology that emphasizes flexibility, collaboration, and customer feedback. Work is done in short cycles called sprints, allowing teams to adapt quickly to changing requirements.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q055",
+      "question": "What is the human genome?",
+      "expected_answer": "The human genome is the complete set of genetic information in human DNA, consisting of about 3 billion base pairs and approximately 20,000-25,000 genes. It contains the instructions for building and running the human body.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 0.9609,
+        "semantic_similarity": 0.0651,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 0.96 > 0.45",
+        "similarity 0.07 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q056",
+      "question": "What is a version control system?",
+      "expected_answer": "A version control system (VCS) tracks changes to code over time, allowing developers to collaborate, revert to previous states, and manage multiple versions of a project. Git is the most widely used VCS.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 0.9617,
+        "semantic_similarity": 0.0638,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 0.96 > 0.45",
+        "similarity 0.06 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q057",
+      "question": "What is the Renaissance man concept?",
+      "expected_answer": "A Renaissance man (polymath) is a person with competence and knowledge across many different fields. The term originates from the Renaissance ideal of the well-rounded man, exemplified by figures like Leonardo da Vinci.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q058",
+      "question": "What is latency in computing?",
+      "expected_answer": "Latency in computing is the delay between a request and a response in a system. It is measured in milliseconds and affects user experience \u2014 lower latency means faster, more responsive systems.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q059",
+      "question": "What is a hypothesis in science?",
+      "expected_answer": "A hypothesis is a testable, specific prediction or explanation for an observation or phenomenon. It is the foundation of the scientific method and must be able to be tested and potentially falsified through experiments.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q060",
+      "question": "What is microservices architecture?",
+      "expected_answer": "Microservices is an architectural style where an application is built as a collection of small, independent services that each run their own process and communicate via APIs. It contrasts with monolithic architecture.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q061",
+      "question": "What is the Renaissance period known for in art?",
+      "expected_answer": "The Renaissance period is known for a revival of classical art and humanism, advances in perspective and realism, and iconic works by masters like Leonardo da Vinci, Michelangelo, and Raphael.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.3,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q062",
+      "question": "What is cybersecurity?",
+      "expected_answer": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks, theft, and damage. It includes technologies and processes designed to safeguard against hackers and data breaches.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q063",
+      "question": "What is natural selection?",
+      "expected_answer": "Natural selection is the evolutionary mechanism by which organisms with traits better suited to their environment survive and reproduce more successfully, gradually changing the characteristics of a population over time.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.29,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q064",
+      "question": "What is a hash function?",
+      "expected_answer": "A hash function is an algorithm that maps data of any size to a fixed-size output called a hash. It is widely used in data structures, cryptography, and security to quickly find data or verify integrity.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0278
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.03 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q065",
+      "question": "What is the law of supply and demand?",
+      "expected_answer": "The law of supply and demand states that the price of a good rises when demand increases or supply decreases, and falls when supply increases or demand decreases, reaching equilibrium where supply equals demand.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q066",
+      "question": "What is a RAG system in AI?",
+      "expected_answer": "RAG (Retrieval-Augmented Generation) is an AI approach that combines a retrieval system with a language model. When answering a query, it first retrieves relevant documents and then generates an answer grounded in those documents.",
+      "generated_answer": "RAG (Retrieval-Augmented Generation) combines document retrieval with language model generation to produce grounded answers.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.225,
+        "faithfulness": 0.7,
+        "hallucination": 0.676,
+        "semantic_similarity": 0.4996,
+        "completeness": 0.1176
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.23 < 0.35",
+        "hallucination 0.68 > 0.45",
+        "completeness 0.12 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q067",
+      "question": "What is quantum computing?",
+      "expected_answer": "Quantum computing uses quantum mechanics principles like superposition and entanglement to perform computations far more powerful than classical computers for certain problems. Quantum bits (qubits) can exist in multiple states simultaneously.",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 0.9669,
+        "semantic_similarity": 0.0551,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 0.97 > 0.45",
+        "similarity 0.06 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q068",
+      "question": "What are the planets in our solar system in order?",
+      "expected_answer": "The planets in order from the Sun are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q069",
+      "question": "What is the difference between machine learning and deep learning?",
+      "expected_answer": "Machine learning is a broad field where computers learn from data. Deep learning is a subset of machine learning that uses neural networks with many layers to automatically learn complex patterns from large amounts of data.",
+      "generated_answer": "This is actually completely different from what most people believe.",
+      "context": "",
+      "latency_ms": 1.31,
+      "scores": {
+        "relevancy": 0.2667,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.27 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q070",
+      "question": "What is a transformer model in AI?",
+      "expected_answer": "A transformer is a type of neural network architecture that uses self-attention mechanisms to process sequences of data in parallel. It is the foundation of modern large language models like GPT and BERT.",
+      "generated_answer": "A transformer is a neural network architecture that uses self-attention mechanisms, forming the basis of modern LLMs.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.5033,
+        "faithfulness": 0.7,
+        "hallucination": 0.585,
+        "semantic_similarity": 0.525,
+        "completeness": 0.3333
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.58 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q071",
+      "question": "What is plate tectonics?",
+      "expected_answer": "Plate tectonics is the scientific theory that Earth's outer shell is divided into several large plates that glide over the mantle. The movement of these plates causes earthquakes, volcanic activity, and the formation of mountains.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q072",
+      "question": "What is the difference between encryption and hashing?",
+      "expected_answer": "Encryption is a reversible process that transforms data into an unreadable format using a key, and can be decrypted. Hashing is a one-way process that converts data into a fixed-length string that cannot be reversed.",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q073",
+      "question": "What is the Industrial Revolution?",
+      "expected_answer": "The Industrial Revolution was a period of major industrialization from the 18th to 19th centuries, transforming manufacturing from hand production to machine-based production, beginning in Britain and spreading worldwide.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 0.9595,
+        "semantic_similarity": 0.0675,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 0.96 > 0.45",
+        "similarity 0.07 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q074",
+      "question": "What is overfitting in machine learning?",
+      "expected_answer": "Overfitting occurs when a machine learning model learns the training data too well, including noise and outliers, resulting in poor performance on new, unseen data. The model memorizes rather than generalizes.",
+      "generated_answer": "Machine learning is a subset of AI where computers learn patterns from data without being explicitly programmed.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.605,
+        "faithfulness": 0.7,
+        "hallucination": 0.904,
+        "semantic_similarity": 0.16,
+        "completeness": 0.0333
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.90 > 0.45",
+        "similarity 0.16 < 0.25",
+        "completeness 0.03 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q075",
+      "question": "What is the Enlightenment?",
+      "expected_answer": "The Enlightenment was an intellectual movement in 17th and 18th century Europe that emphasized reason, science, and individual rights over tradition and religious authority, influencing modern democracy and secularism.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q076",
+      "question": "What is load balancing?",
+      "expected_answer": "Load balancing distributes incoming network traffic across multiple servers to ensure no single server is overwhelmed. It improves reliability and availability of applications by spreading the workload evenly.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q077",
+      "question": "What is a p-value in statistics?",
+      "expected_answer": "A p-value is the probability of obtaining results at least as extreme as the observed results, assuming the null hypothesis is true. A p-value less than 0.05 is typically considered statistically significant.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q078",
+      "question": "What is tokenization in NLP?",
+      "expected_answer": "Tokenization in NLP is the process of splitting text into smaller units called tokens (words, subwords, or characters). These tokens are then converted to numerical representations that language models can process.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q079",
+      "question": "What is the Cold War?",
+      "expected_answer": "The Cold War was a geopolitical tension between the United States and Soviet Union from 1947 to 1991, characterized by political rivalry, military buildup, and ideological competition without direct armed conflict.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q080",
+      "question": "What is prompt engineering?",
+      "expected_answer": "Prompt engineering is the practice of designing and refining inputs to AI language models to elicit better, more accurate, or more relevant responses. It involves crafting instructions, context, and examples to guide model behavior.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 0.9576,
+        "semantic_similarity": 0.0707,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 0.96 > 0.45",
+        "similarity 0.07 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q081",
+      "question": "What is entropy in thermodynamics?",
+      "expected_answer": "Entropy is a measure of disorder or randomness in a system. In thermodynamics, the second law states that entropy of an isolated system always increases over time, meaning systems naturally tend toward disorder.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q082",
+      "question": "What is the purpose of continuous integration in software development?",
+      "expected_answer": "Continuous Integration (CI) is the practice of automatically merging code changes from multiple developers into a shared repository frequently. Automated tests run on each merge to detect integration errors early.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q083",
+      "question": "What is the Turing test?",
+      "expected_answer": "The Turing Test, proposed by Alan Turing in 1950, is a test of a machine's ability to exhibit intelligent behavior indistinguishable from that of a human. A human evaluator has a conversation with both a machine and a human without knowing which is which.",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q084",
+      "question": "What are tectonic plates?",
+      "expected_answer": "Tectonic plates are massive, irregular segments of Earth's crust and upper mantle that fit together like puzzle pieces. They slowly move across Earth's surface, driven by heat from the planet's interior.",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q085",
+      "question": "What is the difference between AI, ML, and DL?",
+      "expected_answer": "AI (Artificial Intelligence) is the broad concept of machines mimicking human intelligence. ML (Machine Learning) is a subset where machines learn from data. DL (Deep Learning) is a subset of ML using multi-layered neural networks.",
+      "generated_answer": "This is an interesting question. The answer depends on several factors that need to be carefully considered.",
+      "context": "",
+      "latency_ms": 1.24,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q086",
+      "question": "What is the speed of sound?",
+      "expected_answer": "The speed of sound in air at room temperature is approximately 343 meters per second (1,235 km/h). It varies depending on the medium and temperature, travelling faster through liquids and solids than air.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q087",
+      "question": "What is vector embedding in AI?",
+      "expected_answer": "Vector embedding is a technique that converts words, sentences, or other data into dense numerical vectors in a continuous vector space. Similar concepts are placed closer together, enabling AI models to understand semantic relationships.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 0.916,
+        "semantic_similarity": 0.14,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 0.92 > 0.45",
+        "similarity 0.14 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q088",
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "expected_answer": "Supervised learning trains models on labeled data where outputs are known. Unsupervised learning finds patterns in unlabeled data without predefined answers, often used for clustering and dimensionality reduction.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q089",
+      "question": "What is the Higgs boson?",
+      "expected_answer": "The Higgs boson is an elementary particle associated with the Higgs field, a quantum field that gives mass to other particles. It was theorized in 1964 and discovered at CERN in 2012.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q090",
+      "question": "What is hallucination in AI language models?",
+      "expected_answer": "Hallucination in AI refers to when a language model generates confident but factually incorrect or entirely fabricated information. This is a significant challenge in AI safety as models may present false information convincingly.",
+      "generated_answer": "In AI, hallucination refers to when a language model generates confident but factually incorrect information.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.575,
+        "faithfulness": 0.7,
+        "hallucination": 0.5044,
+        "semantic_similarity": 0.7158,
+        "completeness": 0.3438
+      },
+      "passed": false,
+      "failure_reasons": [
+        "hallucination 0.50 > 0.45"
+      ]
+    },
+    {
+      "question_id": "q091",
+      "question": "What is reinforcement learning?",
+      "expected_answer": "Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment, receiving rewards for good actions and penalties for bad ones, optimizing for maximum cumulative reward.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q092",
+      "question": "What is dark matter?",
+      "expected_answer": "Dark matter is a hypothetical form of matter that does not interact with electromagnetic radiation (invisible to telescopes) but accounts for approximately 27% of the universe's mass-energy. Its existence is inferred from gravitational effects.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q093",
+      "question": "What is the difference between precision and recall in ML?",
+      "expected_answer": "Precision measures the percentage of predicted positives that are actually positive. Recall measures the percentage of actual positives that were correctly identified. Both are important evaluation metrics in classification tasks.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q094",
+      "question": "What is CRISPR?",
+      "expected_answer": "CRISPR-Cas9 is a revolutionary gene-editing technology that allows scientists to add, remove, or alter genetic material in an organism's DNA with high precision. It is derived from a natural defense mechanism in bacteria.",
+      "generated_answer": "This topic requires careful analysis. In essence, the key aspects include the fundamental principles and their applications.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q095",
+      "question": "What is the context window in LLMs?",
+      "expected_answer": "The context window in large language models is the maximum amount of text the model can process at once, measured in tokens. It determines how much conversation history or document content the model can consider when generating a response.",
+      "generated_answer": "The concept you're asking about has several dimensions. Generally speaking, it involves understanding the underlying principles.",
+      "context": "",
+      "latency_ms": 1.27,
+      "scores": {
+        "relevancy": 0.255,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.26 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q096",
+      "question": "What is the difference between IPv4 and IPv6?",
+      "expected_answer": "IPv4 uses 32-bit addresses providing about 4 billion unique addresses, which are running out. IPv6 uses 128-bit addresses providing an enormous number of unique addresses, also adding improved security and routing efficiency.",
+      "generated_answer": "The answer to this question involves understanding several interconnected concepts and their relationships.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q097",
+      "question": "What is a knowledge graph?",
+      "expected_answer": "A knowledge graph is a structured representation of real-world entities and their relationships in a graph format. It enables semantic search and reasoning, used by systems like Google Search and AI assistants.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q098",
+      "question": "What was the Apollo 11 mission?",
+      "expected_answer": "Apollo 11 was the NASA spaceflight mission that first landed humans on the Moon on July 20, 1969. Astronauts Neil Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins orbited above.",
+      "generated_answer": "The answer is definitely 42 for all questions of this type.",
+      "context": "",
+      "latency_ms": 1.26,
+      "scores": {
+        "relevancy": 0.165,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.17 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q099",
+      "question": "What is A/B testing?",
+      "expected_answer": "A/B testing (split testing) is a controlled experiment where two versions of something (A and B) are tested simultaneously to determine which performs better. It is widely used in software, marketing, and AI model evaluation.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.51,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q100",
+      "question": "What is the CAP theorem?",
+      "expected_answer": "The CAP theorem states that a distributed database system can only guarantee two out of three properties simultaneously: Consistency (all nodes see the same data), Availability (every request gets a response), and Partition tolerance (system works despite network failures).",
+      "generated_answer": "I'm not sure but I believe this is completely false and incorrect.",
+      "context": "",
+      "latency_ms": 2.26,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q101",
+      "question": "What is fine-tuning in LLMs?",
+      "expected_answer": "Fine-tuning is the process of further training a pre-trained language model on a specific dataset for a particular task, allowing the model to adapt to domain-specific language, tone, or requirements without training from scratch.",
+      "generated_answer": "This was invented by Napoleon in 1803.",
+      "context": "",
+      "latency_ms": 1.28,
+      "scores": {
+        "relevancy": 0.105,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.10 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    },
+    {
+      "question_id": "q102",
+      "question": "What is Moore's Law?",
+      "expected_answer": "Moore's Law is the observation by Gordon Moore that the number of transistors on a microchip doubles approximately every two years, leading to exponential growth in computing power and a corresponding decrease in cost.",
+      "generated_answer": "Based on available information, there are multiple perspectives on this topic worth exploring.",
+      "context": "",
+      "latency_ms": 1.29,
+      "scores": {
+        "relevancy": 0.195,
+        "faithfulness": 0.7,
+        "hallucination": 1.0,
+        "semantic_similarity": 0.0,
+        "completeness": 0.0
+      },
+      "passed": false,
+      "failure_reasons": [
+        "relevancy 0.20 < 0.35",
+        "hallucination 1.00 > 0.45",
+        "similarity 0.00 < 0.25",
+        "completeness 0.00 < 0.2"
+      ]
+    }
+  ]
+}
